@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-btn {
+  background: #007acc;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.arrow-btn:hover,
+.arrow-btn:focus {
+  background: #005fa3;
+  outline: none;
+}
+
+.arrow-btn:focus-visible {
+  outline: 2px solid #333;
+}
+
+.imageContainer {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  scroll-behavior: smooth;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselImages {
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    width: 100%;
+    height: 250px;
+  }
+
+  .arrow-btn {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow-btn {
+    width: 50px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+  .mobilebtn {
+    display: flex !important;
+  }
+  .mobilebtn div {
+    margin: 12px;
+  }
+  .laptop {
+    display: none !important;
+  }
+}
+
+.imageContainer > div {
+  display: none;
+  width: 100%;
+}
+
+.imageContainer .active {
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.mobilebtn {
+  display: none;
+}
+.laptop {
+  display: block;
+}

@@ -2,29 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Carousel (WCAG 2.5.1) — Pointer Gesture Support, Live Announcements</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Accessible Carousel (WCAG 2.5.1) — Pointer Gesture Support, Live
+        Announcements
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="carousel">
-
-        <div><button class="arrow-btn"></button></div>
-        <div class="imageContainer">
-            <div><img src="" alt="" class="carouselImages"></div>
-            <div><img src="" alt="" class="carouselImages"></div>
-            <div><img src="" alt="" class="carouselImages"></div>
-            <div><img src="" alt="" class="carouselImages"></div>
-            <div><img src="" alt="" class="carouselImages"></div>
-            <div><img src="" alt="" class="carouselImages"></div>
-            <div><img src="" alt="" class="carouselImages"></div>
+    <main>
+        <div class="carousel">
+            <div><button class="prev arrow-btn laptop" aria-label="Previous Slide">&larr;</button></div>
+            <div class="mainContainer">
+                <div class="imageContainer">
+                    <div class="active">
+                        <img src="./assets/bird.jpg" alt="A fluffy yellow duckling standing on a rock in sunlight"
+                            class="carouselImages" />
+                    </div>
+                    <div>
+                        <img src="./assets/chinese-lamp.jpg"
+                            alt="Several traditional Japanese paper lanterns with black kanji characters hanging indoors"
+                            class="carouselImages" />
+                    </div>
+                    <div>
+                        <img src="./assets/flowers.jpg" alt="Close-up of white daisies with green leaves in a garden"
+                            class="carouselImages" />
+                    </div>
+                    <div>
+                        <img src="./assets/furniture.jpg"
+                            alt="Three metal ewers/pitchers on an inlaid cabinet against a green wooden door."
+                            class="carouselImages" />
+                    </div>
+                    <div>
+                        <img src="./assets/girl-jump.jpg"
+                            alt="Woman in a sweater and jeans jumping against a blue sky with pink and white balloons"
+                            class="carouselImages" />
+                    </div>
+                    <div>
+                        <img src="./assets/girl-with-flowers.jpg"
+                            alt="Woman's profile surrounded by a dense cluster of small white flowers."
+                            class="carouselImages" />
+                    </div>
+                    <div>
+                        <img src="./assets/view.jpg"
+                            alt="Historic European buildings built directly against a large stone wall or fortification."
+                            class="carouselImages" />
+                    </div>
+                </div>
+            </div>
+            <div class="mobilebtn">
+                <div><button class="prev arrow-btn" aria-label="Previous Slide">&larr;</button></div>
+                <div><button class="next arrow-btn" aria-label="Next Slide">&rarr;</button></div>
+            </div>
+            <div><button class="next arrow-btn laptop" aria-label="Next Slide">&rarr;</button></div>
         </div>
-        <div><button class="arrow-btn"></button></div>
-
-    </div>
+        <div class="liveAnnouncement sr-only" aria-live="polite"></div>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
