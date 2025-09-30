@@ -1,4 +1,3 @@
-// NEXT button click
 $(".next").on("click", function () {
   const $current = $(".active");
   const $next = $current.next();
@@ -15,7 +14,6 @@ $(".next").on("click", function () {
   announce(`slide ${position}`);
 });
 
-// PREV button click
 $(".prev").on("click", function () {
   const $current = $(".active");
   const $prev = $current.prev();
@@ -46,17 +44,41 @@ $(".imageContainer").on("touchend", function (e) {
 
   if (diffX > 50) {
     $(".next").click();
-  }
-
-  if (diffX < -50) {
+  } else if (diffX < -50) {
     $(".prev").click();
   }
+});
+
+let isDragging = false;
+
+$(".imageContainer").on("mousedown", function (e) {
+  isDragging = true;
+  startX = e.clientX;
+});
+
+$(document).on("mouseup", function (e) {
+  if (!isDragging) return;
+  isDragging = false;
+
+  endX = e.clientX;
+  const diffX = startX - endX;
+
+  if (diffX > 50) {
+    $(".next").click();
+  } else if (diffX < -50) {
+    $(".prev").click();
+  }
+});
+
+$(".imageContainer img").on("dragstart", function (e) {
+  e.preventDefault();
 });
 
 function announce(message) {
   setTimeout(() => {
     $(".liveAnnouncement").text(message);
   }, 50);
+
   setTimeout(() => {
     $(".liveAnnouncement").text("");
   }, 2000);
