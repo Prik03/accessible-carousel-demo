@@ -24,7 +24,7 @@ This project primarily addresses the following WCAG success criteria:
 ## 🚀 Demo
 
 You can view the live demo here:  
-[Live Demo Link](#) <!-- Replace # with your deployed demo link -->
+[Live Demo Link](https://accessible-carousel-demo.vercel.app/)
 
 ## Installation
 
