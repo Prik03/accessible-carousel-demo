@@ -1,6 +1,4 @@
-// ---------- Common Announce Function ----------
 function announce(message) {
-  // Small delay to ensure screen readers detect the update
   setTimeout(() => {
     $(".liveAnnouncement").text(message);
   }, 50);
@@ -9,11 +7,6 @@ function announce(message) {
     $(".liveAnnouncement").text("");
   }, 2000);
 }
-
-
-// =====================================================================
-// ============== CAROUSEL WITH BUTTONS =================================
-// =====================================================================
 
 // Next Button
 $(".next").on("click", function () {
@@ -29,7 +22,8 @@ $(".next").on("click", function () {
   }
 
   const position = $(".withbtn .imageContainer .active").index() + 1;
-  announce(`Slide ${position}`);
+  const alt=$(".withbtn .imageContainer .active").attr("alt");
+  announce(`Slide Changed To ${alt}`);
 });
 
 // Prev Button
@@ -46,11 +40,10 @@ $(".prev").on("click", function () {
   }
 
   const position = $(".withbtn .imageContainer .active").index() + 1;
-  announce(`Slide ${position}`);
+   const alt=$(".withbtn .imageContainer .active").attr("alt");
+  announce(`Slide Changed To ${alt}`);
 });
 
-
-// ---------- Swipe / Drag for Carousel WITH Buttons ----------
 let startX = 0;
 let endX = 0;
 let isDragging = false;
@@ -80,10 +73,6 @@ $(".withbtn .imageContainer img").on("dragstart", function (e) {
   e.preventDefault();
 });
 
-
-// =====================================================================
-// ============== CAROUSEL WITHOUT BUTTONS =============================
-// =====================================================================
 
 let startX2 = 0;
 let endX2 = 0;
@@ -115,15 +104,11 @@ $(".withoutbtn .imageContainer img").on("dragstart", function (e) {
 });
 
 
-// =====================================================================
-// ============== SHARED SWIPE HANDLER =================================
-// =====================================================================
 function handleSwipe(diff, carouselSelector) {
   if (diff < -50) {
-    // swipe left → next
     goToNextSlide(carouselSelector);
   } else if (diff > 50) {
-    // swipe right → prev
+
     goToPrevSlide(carouselSelector);
   }
 }
