@@ -21,7 +21,6 @@ $(".next").on("click", function () {
     $(".withbtn .imageContainer img").first().addClass("active");
   }
 
-  const position = $(".withbtn .imageContainer .active").index() + 1;
   const alt=$(".withbtn .imageContainer .active").attr("alt");
   announce(`Slide Changed To ${alt}`);
 });
@@ -39,7 +38,6 @@ $(".prev").on("click", function () {
     $(".withbtn .imageContainer img").last().addClass("active");
   }
 
-  const position = $(".withbtn .imageContainer .active").index() + 1;
    const alt=$(".withbtn .imageContainer .active").attr("alt");
   announce(`Slide Changed To ${alt}`);
 });
@@ -124,9 +122,8 @@ function goToNextSlide(carouselSelector) {
   } else {
     $(`${carouselSelector} .imageContainer img`).first().addClass("active");
   }
-
-  const position = $(`${carouselSelector} .imageContainer .active`).index() + 1;
-  announce(`Slide ${position}`);
+   const alt=$(".withbtn .imageContainer .active").attr("alt");
+  announce(`Slide Changed To ${alt}`);
 }
 
 function goToPrevSlide(carouselSelector) {
@@ -141,6 +138,6 @@ function goToPrevSlide(carouselSelector) {
     $(`${carouselSelector} .imageContainer img`).last().addClass("active");
   }
 
-  const position = $(`${carouselSelector} .imageContainer .active`).index() + 1;
-  announce(`Slide ${position}`);
+   const alt=$(".withbtn .imageContainer .active").attr("alt");
+  announce(`Slide Changed To ${alt}`);
 }
