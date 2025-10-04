@@ -6,15 +6,6 @@
 
 .mainContainer {
   width: 100%;
-  overflow: hidden;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
 }
 
 .details {
@@ -31,6 +22,8 @@ main {
 .carouselContainer {
   display: flex;
   justify-content: center;
+  place-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 24px 0;
 }
@@ -41,7 +34,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .carousel {
@@ -53,6 +45,7 @@ body {
   border-radius: 8px;
   max-width: 100%;
   width: 50%;
+  margin-block: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,7 +73,8 @@ body {
   outline: 2px solid #333;
 }
 
-.imageContainer {
+.imageContainer,
+.withoutBtn {
   display: flex;
   width: 100%;
   height: 350px;
@@ -96,7 +90,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .imageContainer {
+  .imageContainer,
+  .withoutBtn {
     width: 100%;
     height: 250px;
   }
@@ -126,7 +121,8 @@ body {
     width: 50px;
   }
 
-  .imageContainer {
+  .imageContainer,
+  .withoutBtn {
     width: 100%;
   }
   .mobilebtn {
@@ -140,7 +136,8 @@ body {
   }
 }
 
-.imageContainer .active {
+.imageContainer .active,
+.withoutBtn .active {
   display: block;
 }
 

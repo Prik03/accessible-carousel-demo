@@ -16,18 +16,25 @@
 <body>
     <main>
 
-        <div class="details">
-            <h1>Accessible Carousel</h1>
-            <p> This carousel lets you browse through images using the Previous and Next buttons or by swiping on touch
-                devices and also announcements of slide changes for screen reader users.</p>
-        </div>
-        <div class="carouselContainer">
 
+        <div class="carouselContainer">
+            <div class="details">
+                <h1>Accessible Carousel</h1>
+            </div>
+            <div class="details">
+                <h2>Carousel with Buttons</h2>
+                <p>
+                    This carousel allows users to navigate through images using the <strong>Previous</strong> and
+                    <strong>Next</strong> buttons.
+                    It also supports swipe gestures on touch devices and announces slide changes to screen reader users,
+                    ensuring better accessibility.
+                </p>
+            </div>
             <div class="carousel">
                 <div><button class="prev arrow-btn laptop" aria-label="Previous Slide">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </button></div>
-                <div class="mainContainer">
+                <div class="mainContainer withbtn">
                     <div class="imageContainer">
                         <img src="./assets/fox.png"
                             alt="An adult red fox standing face to face with a curious fox cub in a grassy outdoor setting"
@@ -56,6 +63,38 @@
                 <div><button class="next arrow-btn laptop" aria-label="Next Slide">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </button></div>
+            </div>
+            <div class="details">
+                <h2>Carousel without Buttons</h2>
+                <p>
+                    This carousel allows users to navigate through images using only <strong>swipe gestures</strong> on
+                    touch devices.
+                    It announces slide changes to screen reader users. This implementation intentionally fails
+                    <strong>WCAG 2.5.1 – Pointer Gestures</strong> as it requires complex gestures without an
+                    alternative input method.
+                </p>
+            </div>
+            <div class="carousel">
+                <div class="mainContainer withoutbtn">
+                    <div class="imageContainer">
+                        <img src="./assets/fox.png"
+                            alt="An adult red fox standing face to face with a curious fox cub in a grassy outdoor setting"
+                            class="carouselImages active" />
+                        <img src="./assets/deer.png"
+                            alt="A brown deer with white spots standing on a forest floor with green trees in the background"
+                            class="carouselImages" />
+                        <img src="./assets/car.png"
+                            alt="Classic brown car on a road in an autumn forest covered in fallen leaves"
+                            class="carouselImages" />
+                        <img src="./assets/homeView.png"
+                            alt="A narrow cobblestone street lined with red flowers in pots, leading to red-walled buildings with tiled roofs"
+                            class="carouselImages" />
+                        <img src="./assets/krishna.png"
+                            alt="Close-up of richly colored peacock feathers with dark green and blue eyespots"
+                            class="carouselImages" />
+
+                    </div>
+                </div>
             </div>
         </div>
         <div class="liveAnnouncement sr-only" aria-live="polite"></div>
