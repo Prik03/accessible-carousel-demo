@@ -31,9 +31,7 @@ This project highlights the following WCAG 2.1 success criteria:
 ## Demo
 
 Explore the live demo here:  
-**Live Demo Link**
-
-(Shows both the Success and Failure examples.)
+[Live Demo Link](https://accessible-carousel-demo.vercel.app/)
 
 ## Installation
 
