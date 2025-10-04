@@ -7,7 +7,7 @@ $(".next").on("click", function () {
   if ($next.length) {
     $next.addClass("active");
   } else {
-    $(".imageContainer div").first().addClass("active");
+    $(".imageContainer img").first().addClass("active");
   }
 
   const position = $(".imageContainer .active").index() + 1;
@@ -23,7 +23,7 @@ $(".prev").on("click", function () {
   if ($prev.length) {
     $prev.addClass("active");
   } else {
-    $(".imageContainer div").last().addClass("active");
+    $(".imageContainer img").last().addClass("active");
   }
 
   const position = $(".imageContainer .active").index() + 1;

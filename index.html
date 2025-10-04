@@ -21,57 +21,42 @@
             <p> This carousel lets you browse through images using the Previous and Next buttons or by swiping on touch
                 devices and also announcements of slide changes for screen reader users.</p>
         </div>
+        <div class="carouselContainer">
 
-        <div class="carousel">
-            <div><button class="prev arrow-btn laptop" aria-label="Previous Slide">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                </button></div>
-            <div class="mainContainer">
-                <div class="imageContainer">
-                    <div class="active">
-                        <img src="./assets/bird.jpg" alt="A fluffy yellow duckling standing on a rock in sunlight"
+            <div class="carousel">
+                <div><button class="prev arrow-btn laptop" aria-label="Previous Slide">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button></div>
+                <div class="mainContainer">
+                    <div class="imageContainer">
+                        <img src="./assets/fox.png"
+                            alt="An adult red fox standing face to face with a curious fox cub in a grassy outdoor setting"
+                            class="carouselImages active" />
+                        <img src="./assets/deer.png"
+                            alt="A brown deer with white spots standing on a forest floor with green trees in the background"
                             class="carouselImages" />
-                    </div>
-                    <div>
-                        <img src="./assets/chinese-lamp.jpg"
-                            alt="Several traditional Japanese paper lanterns with black kanji characters hanging indoors"
+                        <img src="./assets/car.png"
+                            alt="Classic brown car on a road in an autumn forest covered in fallen leaves"
                             class="carouselImages" />
-                    </div>
-                    <div>
-                        <img src="./assets/flowers.jpg" alt="Close-up of white daisies with green leaves in a garden"
+                        <img src="./assets/homeView.png"
+                            alt="A narrow cobblestone street lined with red flowers in pots, leading to red-walled buildings with tiled roofs"
                             class="carouselImages" />
-                    </div>
-                    <div>
-                        <img src="./assets/furniture.jpg"
-                            alt="Three metal ewers/pitchers on an inlaid cabinet against a green wooden door."
+                        <img src="./assets/krishna.png"
+                            alt="Close-up of richly colored peacock feathers with dark green and blue eyespots"
                             class="carouselImages" />
-                    </div>
-                    <div>
-                        <img src="./assets/girl-jump.jpg"
-                            alt="Woman in a sweater and jeans jumping against a blue sky with pink and white balloons"
-                            class="carouselImages" />
-                    </div>
-                    <div>
-                        <img src="./assets/girl-with-flowers.jpg"
-                            alt="Woman's profile surrounded by a dense cluster of small white flowers."
-                            class="carouselImages" />
-                    </div>
-                    <div>
-                        <img src="./assets/view.jpg"
-                            alt="Historic European buildings built directly against a large stone wall or fortification."
-                            class="carouselImages" />
+
                     </div>
                 </div>
+                <div class="mobilebtn">
+                    <div><button class="prev arrow-btn" aria-label="Previous Slide"><i class="fa fa-chevron-left"
+                                aria-hidden="true"></i></button></div>
+                    <div><button class="next arrow-btn" aria-label="Next Slide"><i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></button></div>
+                </div>
+                <div><button class="next arrow-btn laptop" aria-label="Next Slide">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button></div>
             </div>
-            <div class="mobilebtn">
-                <div><button class="prev arrow-btn" aria-label="Previous Slide"><i class="fa fa-chevron-left"
-                            aria-hidden="true"></i></button></div>
-                <div><button class="next arrow-btn" aria-label="Next Slide"><i class="fa fa-chevron-right"
-                            aria-hidden="true"></i></button></div>
-            </div>
-            <div><button class="next arrow-btn laptop" aria-label="Next Slide">
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                </button></div>
         </div>
         <div class="liveAnnouncement sr-only" aria-live="polite"></div>
     </main>
