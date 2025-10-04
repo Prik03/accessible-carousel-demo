@@ -22,12 +22,15 @@
                 <h1>Accessible Carousel</h1>
             </div>
             <div class="details">
-                <h2>Carousel with Buttons</h2>
+                <h2>Carousel with Buttons – Success Example</h2>
                 <p>
                     This carousel allows users to navigate through images using the <strong>Previous</strong> and
-                    <strong>Next</strong> buttons.
-                    It also supports swipe gestures on touch devices and announces slide changes to screen reader users,
-                    ensuring better accessibility.
+                    <strong>Next</strong> buttons,
+                    as well as swipe gestures on touch devices.
+                    Providing these simple button controls ensures that users who cannot perform complex gestures can
+                    still operate the carousel,
+                    thereby meeting <strong>WCAG 2.5.1 – Pointer Gestures</strong>.
+                    It also announces slide changes for screen reader users, improving overall accessibility.
                 </p>
             </div>
             <div class="carousel">
@@ -65,13 +68,15 @@
                     </button></div>
             </div>
             <div class="details">
-                <h2>Carousel without Buttons</h2>
+                <h2>Carousel without Buttons – Failure Example</h2>
                 <p>
                     This carousel allows users to navigate through images using only <strong>swipe gestures</strong> on
                     touch devices.
-                    It announces slide changes to screen reader users. This implementation intentionally fails
-                    <strong>WCAG 2.5.1 – Pointer Gestures</strong> as it requires complex gestures without an
-                    alternative input method.
+                    Since it does not provide a simple alternative method like buttons or links, it fails
+                    <strong>WCAG 2.5.1 – Pointer Gestures</strong>.
+                    While it still announces slide changes for screen reader users, the lack of alternative input makes
+                    it less accessible
+                    for users who cannot perform complex gestures.
                 </p>
             </div>
             <div class="carousel">
